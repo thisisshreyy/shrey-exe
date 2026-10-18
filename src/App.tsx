@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, MeshDistortMaterial, OrbitControls, Sparkles } from '@react-three/drei'
 import { motion } from 'framer-motion'
-import { ArrowDownRight, ArrowUpRight, AudioLines, Code2, Command, Github, Globe2, MoveUpRight, Radio, Scan, Terminal, Volume2, X } from 'lucide-react'
+import { ArrowDownRight, ArrowUpRight, AudioLines, Code2, Command, Globe2, MoveUpRight, Radio, Scan, Terminal, Volume2, X } from 'lucide-react'
 import type { Mesh } from 'three'
 
 const destinations = [
@@ -131,7 +131,7 @@ function App() {
 
       <section className="signal-section" id="signal">
         <div className="signal-left"><span className="eyebrow"><span className="tiny-square" /> ESTABLISH A CONNECTION</span><h2>GOT A<br /><span className="outline-word">WEIRD</span><br />IDEA?</h2></div>
-        <div className="signal-right"><p>Good. The normal ones are taken.</p><a className="contact-link" href="https://github.com/thisisshreyy" target="_blank" rel="noreferrer"><span className="contact-icon"><Github size={19} /></span><span><small>FIND ME ON</small>GITHUB</span><ArrowUpRight size={20} /></a><a className="contact-link" href="mailto:hello@shrey.exe"><span className="contact-icon"><Globe2 size={19} /></span><span><small>OR SEND A SIGNAL</small>LET'S TALK</span><ArrowUpRight size={20} /></a><div className="signal-note"><Terminal size={14} /><span>OPEN TO COLLABS, EXPERIMENTS & UNUSUAL QUESTIONS.</span></div></div>
+        <div className="signal-right"><p>Good. The normal ones are taken.</p><a className="contact-link" href="https://github.com/thisisshreyy" target="_blank" rel="noreferrer"><span className="contact-icon"><Code2 size={19} /></span><span><small>FIND ME ON</small>GITHUB</span><ArrowUpRight size={20} /></a><a className="contact-link" href="mailto:hello@shrey.exe"><span className="contact-icon"><Globe2 size={19} /></span><span><small>OR SEND A SIGNAL</small>LET'S TALK</span><ArrowUpRight size={20} /></a><div className="signal-note"><Terminal size={14} /><span>OPEN TO COLLABS, EXPERIMENTS & UNUSUAL QUESTIONS.</span></div></div>
       </section>
 
       <footer className="footer"><a className="footer-logo" href="#top">SHREY<span>.EXE</span></a><span>MADE WITH INTENT, NOT A TEMPLATE.</span><span>© 2026 / END OF TRANSMISSION <ArrowUpRight size={12} /></span></footer>
