@@ -71,7 +71,7 @@ function App() {
       <div className="noise" aria-hidden="true" />
       <div className="scanline" aria-hidden="true" />
       <header className="topbar">
-        <a className="wordmark" href="#top" aria-label="SHREY.EXE home"><span className="wordmark-mark">S<span>/</span></span><span>SHREY<span className="wordmark-dot">.EXE</span></span></a>
+        <a className='wordmark text-[#6abe52] bg-[#b1ff9a]' href="#top" aria-label="SHREY.EXE home"><span className="wordmark-mark">S<span>/</span></span><span>SHREY<span className="wordmark-dot">.EXE</span></span></a>
         <div className="top-status"><span className="status-light" /> SYSTEM ONLINE <span className="status-divider">/</span> BUILD 001</div>
         <div className="top-actions">
           <button className="icon-button sound-button" onClick={() => setSoundOn(!soundOn)} aria-label={soundOn ? 'Turn sound off' : 'Turn sound on'}><Volume2 size={16} /><span>{soundOn ? 'SOUND ON' : 'SOUND OFF'}</span></button>
@@ -113,18 +113,17 @@ function App() {
 
       <section className="rooms-section" id="rooms">
         <div className="section-heading">
-          <div><span className="eyebrow"><span className="tiny-square" /> CHOOSE YOUR OWN ADVENTURE</span><h2>FOUR DOORS.<br /><span className="muted-word">NO BORING ONES.</span></h2></div>
+          <div><span className="eyebrow"><span className="tiny-square" /> CHOOSE YOUR OWN ADVENTURE</span><h2>projecss<br /><span className="muted-word"></span></h2></div>
           <p className="section-aside">This isn't a résumé.<br />It's a collection of rabbit holes.<br /><span className="lime-text">Pick one. Get lost.</span></p>
         </div>
         <div className="room-grid">
           {destinations.map((room) => {
             const Icon = room.icon
-            return <motion.button key={room.number} className={`room-card ${room.color} ${activeRoom === room.number ? 'room-card-active' : ''}`} onClick={() => setActiveRoom(activeRoom === room.number ? null : room.number)} whileHover={{ y: -4 }} whileTap={{ scale: 0.99 }}>
-              <div className="room-card-top"><span className="room-number">/{room.number}</span><Icon className="room-icon" size={21} strokeWidth={1.5} /><span className="room-arrow"><ArrowUpRight size={18} /></span></div>
-              <div className="room-card-main"><h3>{room.title}</h3><p>{room.subtitle}</p></div>
-              <div className="room-card-bottom"><span className="room-tag"><span className="tag-dot" />{room.tag}</span><span className="room-open">{activeRoom === room.number ? 'CLOSE' : 'OPEN'} <ArrowUpRight size={12} /></span></div>
-              {activeRoom === room.number && <motion.div className="room-expanded" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}><p>{room.number === '01' ? 'A workbench for code, hardware, and ideas that refuse to stay ideas.' : room.number === '02' ? 'Little loops, big feelings, late nights, and experiments in sound.' : room.number === '03' ? 'A sandbox for spatial experiments, strange visuals, and digital objects.' : 'The person behind the pixels: curious, ambitious, and always making something.'}</p><span>MORE SIGNAL COMING SOON <ArrowUpRight size={12} /></span></motion.div>}
-            </motion.button>
+            return (
+              <motion.button key={room.number} className={`room-card ${room.color} ${activeRoom === room.number ? 'room-card-active' : ''}`} onClick={() => setActiveRoom(activeRoom === room.number ? null : room.number)} whileHover={{ y: -4 }} whileTap={{ scale: 0.99 }}>{' '}<div className="room-card-top"><span className="room-number">/{room.number}</span><Icon className="room-icon" size={21} strokeWidth={1.5} /><span className="room-arrow"><ArrowUpRight size={18} /></span></div>{' '}<div className="room-card-main"><h3>{room.title}</h3><p>{room.subtitle}</p></div>
+                <div className="room-card-bottom"><span className="room-tag"><span className="tag-dot" />{room.tag}</span><span className="room-open">{activeRoom === room.number ? 'CLOSE' : 'OPEN'}<ArrowUpRight size={12} /></span></div>
+                {activeRoom === room.number && <motion.div className="room-expanded" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}><p>{room.number === '01' ? 'A workbench for code, hardware, and ideas that refuse to stay ideas.' : room.number === '02' ? 'Little loops, big feelings, late nights, and experiments in sound.' : room.number === '03' ? 'A sandbox for spatial experiments, strange visuals, and digital objects.' : 'The person behind the pixels: curious, ambitious, and always making something.'}</p><span>MORE SIGNAL COMING SOON <ArrowUpRight size={12} /></span></motion.div>}</motion.button>
+            );
           })}
         </div>
       </section>
@@ -136,7 +135,7 @@ function App() {
 
       <footer className="footer"><a className="footer-logo" href="#top">SHREY<span>.EXE</span></a><span>MADE WITH INTENT, NOT A TEMPLATE.</span><span>© 2026 / END OF TRANSMISSION <ArrowUpRight size={12} /></span></footer>
     </main>
-  )
+  );
 }
 
 export default App
